@@ -1,0 +1,626 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+/* Custom Scroll */
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+  }
+  :root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(
+      45deg,
+      #9b34ef 0%,
+      #490cb0 20%,
+      transparent 50%
+    );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(
+      90deg,
+      #5516ba,
+      rgba(255, 0, 229, 0.5) 80%
+    );
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+  }
+  *{
+    font-family: 'Quicksand', sans-serif;
+    color: var(--text-color);
+    font-size: 1rem;
+  }
+  body{
+  
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+    
+  
+  }
+  button{
+    cursor: pointer;
+  }
+  .nav-header{
+    width: 100vw;
+    position: fixed;
+    height: 50px;
+    top: 0;
+    z-index: 10;
+    
+   background-color: var(--nav-bg-color);
+   
+  
+  
+  
+
+    
+    
+}
+section{
+  scroll-margin-top:4rem;
+}
+
+.nav-bar{
+  padding:12px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  
+ 
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+ 
+ 
+
+}
+  nav img{
+  width: 100%;
+  max-width: 160px;
+  }
+  .buy{
+    background-color: #b135fb;
+    
+    padding: 8px 30px;
+    border-radius:30px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    margin-right: 30px;
+    
+  }
+  .button-buy  a:active{
+    background-color: white;
+  }
+ 
+
+  .login{
+    background: none;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    padding-right: 20px;
+    letter-spacing: 0.15rem;
+    
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+    
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    margin: auto;
+    gap: 20px;
+    margin-top: 100px;
+
+  }
+  .container img{
+    width: 100%;
+  }
+  .container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+  
+   
+    
+  
+  }
+  header{
+    position: relative;
+    color:var(--text-color);
+    display: flex;
+    flex-direction: column;
+ 
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+   
+    
+    
+  
+  }
+ header::after{
+    content: "";
+    
+   position: absolute;
+   z-index: -10;
+    width: 100%;
+    height: 600px;
+    top: 80px;
+ /*
+    linear-gradient(
+        45deg,
+        #9b34ef 0%,
+        #490cb0 20%,
+        transparent 50%
+      );*/
+      background: linear-gradient(0deg, var(--primary-color), transparent);
+    background-size: 300% 300%;
+  
+    animation: gradiente 1s ease-in infinite; 
+    filter: blur(300px);
+    
+ }
+ .divider{
+    background: var(--divider-bg-color);
+    height: 5px;
+    width: 50%;
+    align-self: center;
+ }
+ header h1{
+    padding: 0;
+    margin-top: 2rem;
+ }
+ .h1-top{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+  
+    letter-spacing: 0.5%;
+    
+  
+  
+ }
+.h1-bottom{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+    text-align: center;
+  
+    margin: auto;
+   
+    font-size: 3rem;
+   
+ }
+ .price-title{
+    font-size: 1.5rem;
+ }
+ .price{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+ }
+ .buy-now{
+   background: var(--btn-bg-color-gradient);
+   
+  
+   background-size: 250%;
+ 
+    border: none ;
+  
+    border-radius: 30px;
+    padding: 16px 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 4px;
+    font-size: 1.0rem;
+    
+    outline: 2px solid transparent;
+  
+    
+    cursor: pointer;
+    transition: background 1s, outline 1s, transform 1s;
+ }
+ .animate{
+  animation: miggle 2.2s linear infinite ;
+  animation-delay: 1s;
+
+ }
+
+ .asteristic{
+  font-size: 1rem;
+  width: 237px;
+  text-align: center;
+ 
+ }
+
+
+ .buy-now:hover{
+  
+  
+ background-color: transparent;
+ background-position: 100%;
+  outline:  2px solid var(--secondary-color);
+  transform: scale(1.05);
+
+
+
+
+ }
+ main{
+  position: relative;
+ 
+  width: 100%;
+  margin: auto;
+  text-align: center;
+ display: flex;
+ flex-direction: column;
+ margin-top:300px;
+  gap: 240px;
+ }
+ .know-section{
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  background: url("/assets/images/background-movies-series.png");
+  background-size: cover;
+ 
+ }
+
+ .know-section h1,.discover h1{
+  font-size: 2rem;
+  max-width: 1150px;
+  margin: 0 auto;
+ }
+
+
+.know-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  perspective: 2000px;
+  perspective-origin: top;
+ 
+}
+.know{
+  background: var(--card-bg-color);
+  padding: 2rem 2.8rem 1rem 2rem;
+  border-radius: 8px;
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 380px;
+ 
+  
+}
+.know-head{
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  padding-left: 1rem;
+
+}
+.know-title{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.know-price{
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem ;
+  color: var(--secondary-color);
+}
+.know-month{
+  font-weight: normal;
+}
+.know-container-list ul{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ 
+ 
+}
+ .ul-list li{
+  font-size:1.25rem;
+  list-style:none;
+  text-align: justify;
+ 
+ }
+ .know-container-list li::marker{
+  content: "+";
+  font-size: 1.5rem;
+  letter-spacing: 1rem;
+ 
+ }
+ .know-left, .know-rigth{
+  transition: 1s ease-in-out;
+ }
+
+ .discover{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+ 
+ 
+ }
+.contain-discover{
+  margin: auto;
+  margin-top:43px;
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fill, 355px);
+  justify-content:center;
+  
+  
+  text-align: center;
+  align-items: center;
+
+ box-sizing: border-box;
+ 
+ 
+  gap: 3rem;
+  
+
+  transition: scale 1s ease-in-out, outline 1.0s ease-in-out ;
+ }
+ .contain-discover-card{
+  border-radius: 10px;
+  transition: all 1s ease-in-out;
+  outline:  2px solid transparent;
+
+ }
+ .contain-discover-card img{
+ 
+  max-width: 350px;
+ }
+
+ footer .socials-media{
+ width: 200px;
+  margin-top: 50px;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  
+ }
+ footer{
+   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 150px;
+ }
+ footer nav ul{
+
+  display: flex;
+  
+  text-transform: uppercase;
+  transition: 1s;
+  
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+ }
+ footer nav li{
+  list-style: none;
+  color: var(--link-color);
+  font-weight: 700;
+  transition: 1s;
+  cursor: pointer;
+  
+ }
+ footer nav li:hover{
+  color: white;
+
+ }
+.credits{
+  padding: 20px;
+
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 750px){
+  .contain-discover{
+  max-width: 355px;
+  overflow: scroll;
+  grid-template-columns: repeat(6, 355px);
+  justify-content:start;
+  }
+ 
+    .nav-bar{
+      flex-direction: column;
+     }
+
+     .h1-bottom{
+      max-width: 300px;
+     }
+     .container{
+      margin-top: 150px;
+      flex-direction: row;
+      max-width: 350px;
+      flex-wrap: wrap;
+     }
+  }
+
+@media screen and (min-width:1200px){
+  .know-container:has(.know:nth-child(1):hover)
+  .know:nth-child(2){
+    transform:rotateY(-45deg);
+  }
+  .know-container:has(.know:nth-child(2):hover)
+ .know:nth-child(1){
+  transform: rotateY(45deg);
+ }
+ footer nav ul{
+  flex-direction: row;
+  justify-content: space-between;
+ }
+ .contain-discover-card:hover{
+  transform: scale(1.05);
+   outline:  2px solid var(--secondary-color);
+
+  
+   
+  }
+  
+
+
+.discover-image{
+  transition: opacity 2s;
+  
+}
+ .contain-discover-card:nth-child(1):hover{
+  background-color: #020228;
+  background-image: url("/assets/images/hbo-hover_0.webp");
+  
+  background-size: cover;
+ 
+ }
+ .discover-image:hover{
+  opacity: 0;
+ }
+
+ .contain-discover-card:nth-child(2):hover{
+  background-color: #020228;
+  background-image: url("/assets/images/MAX-Hover.webp");
+  
+  background-size: cover;
+ 
+ }
+ .contain-discover-card:nth-child(3):hover{
+  background-color: #020228;
+  background-image: url("/assets/images/DC-Hover.webp");
+  
+  background-size: cover;
+ 
+ }
+ .contain-discover-card:nth-child(4):hover{
+  background-color: #020228;
+  background-image: url("/assets/images/WB-Hover.webp");
+  
+  background-size: cover;
+ 
+ }
+ .contain-discover-card:nth-child(5):hover{
+  background-color: #020228;
+  background-image: url("/assets/images/CN-Hover.png");
+  
+  background-size: cover;
+ 
+ }
+ .contain-discover-card:nth-child(6):hover{
+  background-color: #020228;
+  background-image: url("/assets/images/UCL-Hover.webp");
+  
+  background-size: cover;
+ 
+ }
+ .contain-discover{
+  margin: auto;
+  margin-top:43px;
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fill, 355px);
+  justify-content:center;
+  text-align: center;
+ 
+  max-width: 1200px;
+  
+  
+
+  
+
+ 
+
+ 
+  gap: 3rem;
+  
+  row-gap: 60px;
+  transition: scale 1s ease-in-out, outline 1.0s ease-in-out ;
+ }
+
+ .container{
+  flex-direction: row;
+
+ }
+
+}
+
+
+
+@keyframes miggle {
+  0% ,10%  {
+    transform: rotate(0);
+    
+  }
+  15%  {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  25%{
+    transform: rotate(-10deg);
+  }
+  30%{
+    transform: rotate(10deg);
+  }
+  35%{
+    transform: rotate(-10deg);
+  }
+  40%,100%{
+    transform: rotate(0);
+  }
+}

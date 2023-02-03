@@ -1,0 +1,95 @@
+#form-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+   
+   
+    background: var(--form-bg-color);
+    max-width: 744px;
+    padding: 18px 34px;
+    
+  
+    border-radius: 8px;;
+   
+}
+
+form{
+    width: 100%;
+    
+}
+.form{
+    width: 100%;
+    
+}
+h2{
+    font-size: 1.25rem;
+    text-align: center;
+}
+.link-color:link{
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+body{
+    background: url("/assets/images/background-movies-series.png");
+    background-size: cover;
+    background-color: var(--primary-color);
+    height: 100vh;
+    
+}
+input{
+    margin-bottom: 26px;
+    background-color: var(--form-bg-color);
+    border-radius: 8px;
+    height: 58px;
+    width: 100%;
+    font-size: 1rem;
+    
+   
+    border: var(--form-field-border)
+}
+main{
+    margin: 100px auto 10px;
+    max-width: 812px;
+    display: flex;
+    flex-direction: column;
+  
+    
+
+}
+nav{
+    position: relative;
+}
+footer{
+    position: relative;
+    margin-top: 10px;
+    justify-content: center;
+    max-width: 812px;
+    letter-spacing: 1px;
+    gap: 40px;
+    margin: auto;
+}
+input::placeholder{
+    color: var(--form-field-placeholder);
+    padding: 10px;
+    
+    
+}
+
+
+.section-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+input:invalid{
+    border: 1px solid red;
+}
+input:required{
+    border: 1px solid red;
+}
